@@ -1,7 +1,7 @@
 :root {
 
-  --color-primary: rgb(255, 247, 0);
-  --paynes-gray: #60777Eff;
+--color-primary: rgb(255, 247, 0);
+--paynes-gray: #60777Eff;
 --rich-black: #011E22ff;
 --powder-blue: #ACBFD6ff;
 --rich-black-2: #001C20ff;
@@ -15,7 +15,6 @@
   font-style: normal;
   font-display: swap;
 }
-
 
 * {
   margin: 0;
@@ -32,6 +31,10 @@ body {
   font-family: 'Space Grotesk', sans-serif;
 }
 
+.off-screen-menu {
+  display: none;
+}
+
 header {
   width: 100%;
   height: 75vh; /* how tall the header should appear */
@@ -46,20 +49,8 @@ header img {
   opacity: 75%;
 }
 
-nav {
-  position: fixed;
-  top: 0;
-  left: 50%;
-  transform: translateX(-50%);
-  width: 100%;
-  max-width: 2000px;
-  z-index: 10;
-  background: rgba(0, 0, 0, 0.6);
-  backdrop-filter: blur(5px);
-  padding: 1rem 2rem;
-  display: flex;
-  align-items: center;
-  justify-items: center;
+.ham-menu {
+  display: none;
 }
 
 #list {
@@ -78,28 +69,28 @@ nav {
   background: rgba(0, 0, 0, 0.6);
   backdrop-filter: blur(5px);
   padding: 1rem 2rem;
-
   display: flex;
   align-items: center;
-  justify-content: space-between; /* ← main improvement */
+  justify-content: space-between;
 }
 
 #logotext {
   color: white;
   font-weight: bold;
-  font-size: 1.5rem;
+  font-size: clamp(0.5em, 2vw, 1.5em);
 }
 
 #navlinks {
   display: flex;
   list-style: none;
-  gap: 2rem; /* ← nice even spacing between items */
+  gap: 2rem;
 }
 
 nav a {
   text-decoration: none;
   color: #fff;
-  font-weight: bold;
+  font-weight: 100;
+  font-size: clamp(1em, 2vw, 1.5em);
   transition: color 0.3s;
   white-space: nowrap;
 }

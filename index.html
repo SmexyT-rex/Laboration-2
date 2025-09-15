@@ -6,14 +6,20 @@
     <title>Tre Kronor Transport</title>
     <link rel="stylesheet" href="style.css" />
     <link rel="stylesheet" href="bigger16kstyle.css" />
+    <link rel="stylesheet" href="app.css" />
   </head>
   <body>
     <header>
       <nav>
         <section id="logotext">
-          <h2>Tre Kronor Transport</h2>
+          <h2 id="logo-h2">Tre Kronor Transport</h2>
         </section>
         <section id="list">
+          <div class="ham-menu">
+            <span></span>
+            <span></span>
+            <span></span>
+          </div>
           <ul id="navlinks">
             <li><a href="#">Hem</a></li>
             <li><a href="#">Om</a></li>
@@ -23,6 +29,33 @@
         </section>
       </nav>
       <img src="./img/seb-creativo-3jG-UM8IZ40-unsplash.webp" />
+      <div class="off-screen-menu">
+        <ul>
+          <li>
+            <div class="search-wrapper">
+              <input type="text" placeholder="Search..." class="styled-input" />
+              <button class="search-btn" aria-label="Search">
+                <!-- Magnifying glass SVG -->
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="16"
+                  height="16"
+                  fill="currentColor"
+                  viewBox="0 0 16 16"
+                >
+                  <path
+                    d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85zm-5.242 1.31a5 5 0 1 1 0-10 5 5 0 0 1 0 10z"
+                  />
+                </svg>
+              </button>
+            </div>
+          </li>
+          <li><a href="#">Hem</a></li>
+          <li><a href="#">Om</a></li>
+          <li><a href="#">Klimat</a></li>
+          <li><a href="#">Kontakta Oss</a></li>
+        </ul>
+      </div>
     </header>
     <main>
       <section>
@@ -55,5 +88,6 @@
         </article>
       </section>
     </main>
+    <script src="./index.js"></script>
   </body>
 </html>
