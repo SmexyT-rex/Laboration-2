@@ -36,6 +36,11 @@
   box-sizing: border-box; /* Make padding included in height */
 }
 
+.ul-container::-webkit-scrollbar {
+  display: none; /* Chrome, Safari, Edge */
+  scrollbar-width: none; /* Firefox */
+}
+
 
 .off-screen-menu ul{
     list-style: none;
@@ -69,6 +74,7 @@
 nav {
     padding: 1rem;
     display: flex;
+    transition: .3s ease;
 
 }
 
