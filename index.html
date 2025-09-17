@@ -5,6 +5,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Tre Kronor Transport</title>
     <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="card.css" />
+    <script
+      src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"
+      async
+    ></script>
   </head>
   <body>
     <header>
@@ -22,7 +27,7 @@
             <li><a href="#">Hem</a></li>
             <li><a href="#">Om</a></li>
             <li><a href="#">Klimat</a></li>
-            <li><a href="#">Kontakta Oss</a></li>
+            <li><a href="#">Kontakta oss</a></li>
           </ul>
         </section>
       </nav>
@@ -56,67 +61,144 @@
             <li><a href="#">Hem</a></li>
             <li><a href="#">Om</a></li>
             <li><a href="#">Klimat</a></li>
-            <li><a href="#">Kontakta Oss</a></li>
+            <li><a href="#">Kontakta oss</a></li>
           </ul>
         </div>
       </div>
     </header>
     <div class="big-input-wrapper">
-      <h2>Spåra försändelse</h2>
-      <div>
-        <div class="big-search-wrapper">
-          <input
-            type="text"
-            placeholder="Försändelsenummer"
-            class="big-styled-input"
-          />
-          <button class="big-search-btn" aria-label="Försändelsenummer">
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              width="16"
-              height="16"
-              fill="currentColor"
-              viewBox="0 0 16 16"
-            >
-              <path
-                d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85zm-5.242 1.31a5 5 0 1 1 0-10 5 5 0 0 1 0 10z"
-              />
-            </svg>
-          </button>
+      <div class="big-input-flex-container">
+        <h2 id="test">Spåra försändelse</h2>
+        <div>
+          <div class="big-search-wrapper">
+            <input
+              type="text"
+              placeholder="Försändelsenummer"
+              class="big-styled-input"
+            />
+            <button class="big-search-btn" aria-label="Försändelsenummer">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="16"
+                height="16"
+                fill="currentColor"
+                viewBox="0 0 16 16"
+                alt="search button"
+              >
+                <path
+                  d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85zm-5.242 1.31a5 5 0 1 1 0-10 5 5 0 0 1 0 10z"
+                />
+              </svg>
+            </button>
+          </div>
         </div>
       </div>
     </div>
     <main>
-      <section>
-        <article>
-          <h2>The standard Lorem Ipsum passage, used since the 1500s</h2>
-          "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-          eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
-          minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-          aliquip ex ea commodo consequat. Duis aute irure dolor in
-          reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
-          pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
-          culpa qui officia deserunt mollit anim id est laborum."
+      <section class="cards" aria-label="kort">
+        <article class="card">
+          <img src="./img/plane.png" alt="Flygande flygplan" />
+          <div class="card-body">
+            <h2 class="card-title">Globalt nätverk</h2>
+            <p class="card-text">
+              Vårt globala nätverk garanterar säkra transporter över kontinenter
+              med konkurrenskraftiga priser.
+            </p>
+          </div>
         </article>
-        <article>
-          <h2>Section 1.10.32 of "de Finibus Bonorum et Malorum"</h2>
-          , written by Cicero in 45 BC "Sed ut perspiciatis unde omnis iste
-          natus error sit voluptatem accusantium doloremque laudantium, totam
-          rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi
-          architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam
-          voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia
-          consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt.
-          Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet,
-          consectetur, adipisci velit, sed quia non numquam eius modi tempora
-          incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut
-          enim ad minima veniam, quis nostrum exercitationem ullam corporis
-          suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis
-          autem vel eum iure reprehenderit qui in ea voluptate velit esse quam
-          nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo
-          voluptas nulla pariatur?"
+
+        <article class="card">
+          <img src="./img/Regera.png" alt="Snabb transportbil" />
+          <div class="card-body">
+            <h2 class="card-title">Snabb leverans</h2>
+            <p class="card-text">
+              Vi erbjuder snabba uttryckleveranser med spårning i realtid och
+              hög tillförlitlighet. Perfekt för brådskande paket.
+            </p>
+          </div>
+        </article>
+
+        <article class="card">
+          <img src="./img/truck.png" alt="Lastbil under färd" />
+          <div class="card-body">
+            <h2 class="card-title">Säkra leveranser</h2>
+            <p class="card-text">
+              Från packning till leverans — vi säkerställer att dina varor når
+              fram hela och i tid.
+            </p>
+          </div>
         </article>
       </section>
+      <section class="information-bar">
+        <div class="container">
+          <aside>
+            <h2>Tullar och avgifter</h2>
+            <p>
+              Vid internationella transporter kan tullavgifter och moms
+              tillkomma. Dessa avgifter varierar beroende på varans värde,
+              ursprungsland och mottagarlandets regler.
+            </p>
+            <ul>
+              <li>Importtullar baseras ofta på varukategori och värde.</li>
+              <li>Moms tillkommer i många länder på importerade varor.</li>
+              <li>Extra hanteringskostnader kan tas ut av transportbolaget.</li>
+            </ul>
+          </aside>
+          <a href="#more-info" class="info-btn">Läs mer</a>
+        </div>
+      </section>
     </main>
+    <footer>
+      <section class="footer-container">
+        <p>&copy; 2025 Tre Kronor Transport</p>
+        <p>Alla rättigheter förbehållna.</p>
+        <div class="social-icons">
+          <a href="https://facebook.com" target="_blank" aria-label="Facebook">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="24"
+              height="24"
+              fill="currentColor"
+              viewBox="0 0 24 24"
+            >
+              <path
+                d="M22.675 0h-21.35C.597 0 0 .597 0 1.333v21.333C0 23.403.597 24 1.325 24h11.494v-9.294H9.691v-3.622h3.128V8.413c0-3.1 1.893-4.788 4.66-4.788 1.325 0 2.463.097 2.796.141v3.24h-1.92c-1.506 0-1.797.716-1.797 1.763v2.31h3.59l-.467 3.622h-3.123V24h6.127C23.403 24 24 23.403 24 22.667V1.333C24 .597 23.403 0 22.675 0z"
+              />
+            </svg>
+          </a>
+          <a href="https://twitter.com" target="_blank" aria-label="Twitter">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="24"
+              height="24"
+              fill="currentColor"
+              viewBox="0 0 24 24"
+            >
+              <path
+                d="M18.244 2H21.5l-7.5 8.57L22.5 22h-6.69l-5.28-6.68L4.5 22H1.244l7.94-9.07L1 2h6.81l4.77 6.21L18.244 2zm-2.36 17.33h1.95L8.21 4.53H6.14l9.74 14.8z"
+              />
+            </svg>
+          </a>
+          <a
+            href="https://instagram.com"
+            target="_blank"
+            aria-label="Instagram"
+          >
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="24"
+              height="24"
+              fill="currentColor"
+              viewBox="0 0 24 24"
+            >
+              <path
+                d="M7.5 2h9A5.5 5.5 0 0 1 22 7.5v9A5.5 5.5 0 0 1 16.5 22h-9A5.5 5.5 0 0 1 2 16.5v-9A5.5 5.5 0 0 1 7.5 2zm0 2A3.5 3.5 0 0 0 4 7.5v9A3.5 3.5 0 0 0 7.5 20h9a3.5 3.5 0 0 0 3.5-3.5v-9A3.5 3.5 0 0 0 16.5 4h-9zm4.5 3.5a5 5 0 1 1 0 10 5 5 0 0 1 0-10zm0 2A3 3 0 1 0 12 16a3 3 0 0 0 0-6zm5.25-3.25a1.25 1.25 0 1 1 0 2.5 1.25 1.25 0 0 1 0-2.5z"
+              />
+            </svg>
+          </a>
+        </div>
+      </section>
+    </footer>
     <script src="./index.js"></script>
   </body>
 </html>

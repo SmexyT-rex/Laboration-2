@@ -18,3 +18,11 @@ hamMenu.addEventListener("click", () => {
     navigationBar.style.backgroundColor = "rgba(0, 0, 0, 0.6)";
   }
 });
+
+document.querySelector(".big-search-btn").addEventListener("click", () => {
+  confetti({
+    particleCount: 300,
+    spread: 6000,
+    origin: { y: 0.4 },
+  });
+});
